@@ -1,0 +1,51 @@
+{
+  "name": "healwrap",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clear": "rimraf build",
+    "build": "npm run clear && tsc",
+    "publish": "npm run build && npm publish",
+    "lint": "tslint ./src/**/*.ts --fix",
+    "lini-fix": "tslint ./src/**/*.ts --fix"
+  },
+  "files": [
+    "build",
+    "bin/bin.js",
+    "template"
+  ],
+  "bin": {
+    "healwrap": "./bin/bin.js",
+    "healwrap-dev": "./bin/bin-dev.js"
+  },
+  "keywords": [],
+  "author": "pepedd864",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/mustache": "^4.2.5",
+    "@types/node": "^20.12.12",
+    "@types/pacote": "^11.1.8",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.45.0",
+    "rimraf": "^5.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.0.0",
+    "copy-dir": "^1.3.0",
+    "execa": "^5.1.1",
+    "figlet": "^1.6.0",
+    "fs-extra": "^11.1.1",
+    "globby": "^11.0.4",
+    "handlebars": "^4.7.7",
+    "inquirer": "^8.2.0",
+    "mustache": "^4.2.0",
+    "ora": "^5.4.1",
+    "pacote": "^15.2.0",
+    "yargs": "^17.7.2"
+  }
+}
